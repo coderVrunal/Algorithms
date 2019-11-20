@@ -11,7 +11,6 @@ get(int key) : T: O(1)
 
 set( int key, int value) : T: O(1)
 */
-
 class LRU{
     class DList{
         String value;
@@ -75,21 +74,26 @@ class LRU{
         }
         else{
             DList n = new DList();
+            n.key = key;
+            n.value = value;
             addNode(n);
             map.put( key, n);
             if( map.size() > size){
                 DList temp = popFromTail();
+                map.remove( temp.key );
             }
         }
     }
 
     
     public static void main(String [] args){
-        System.out.println( "Hello World");
         LRU lru = new LRU( 2 );
         lru.set( "alpha", "hello" );
         lru.set( "beta", "world");
         lru.set( "gamma", "!");
+        lru.set("zeta", "...");
+        System.out.println( lru.get("gamma"));
+        System.out.println( lru.get("alpha"));
     }
 }
 
