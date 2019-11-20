@@ -42,7 +42,7 @@ class LRU{
     private void moveToHead(DList node) {
         removeNode(node);
         addNode( node);
-    })
+    }
 
     public String  get(String key ){
         if( map.containsKey(key)){
