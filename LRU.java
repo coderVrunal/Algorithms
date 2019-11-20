@@ -15,36 +15,51 @@ set( int key, int value) : T: O(1)
 class LRU{
     class DList{
         String value;
+        String key;
         DList next;
         DList prev;
-        public DList(String v){
-            value = v;
-        }
     }
 
     DList head , tail;
     HashMap<String, DList> map;
+    int size;
     public LRU( int capacity ){
         head = new DList();
+        tail = new DList();
         head.next = tail;
         tail.prev = head;
         map = new HashMap<>();
+        size = capacity;
     }
 
-    private addNode(String value){
-
+    private void addNode(DList node){
+        head.next.prev = node;
+        head.next = node; 
+        node.next = head.next;
+        node.prev = head;
     }
 
-    private removeNode(String value){
 
+    private void removeNode(DList node){
+        DList next= node.next;
+        DList prev = node.prev;
+        next.prev = prev;
+        prev.next = next;
     }
 
     private void moveToHead(DList node) {
         removeNode(node);
-        addNode( node);
+        addNode(node);
     }
 
-    public String  get(String key ){
+    private DList popFromTail(){    
+        DList temp = tail.prev;
+        removeNode(temp);
+        return temp;
+    
+    }
+
+    public String get(String key ){
         if( map.containsKey(key)){
             moveToHead(map.get(key) );
             return map.get(key).value;
@@ -59,7 +74,12 @@ class LRU{
             moveToHead(temp);
         }
         else{
-            addNode( new DList(value));
+            DList n = new DList();
+            addNode(n);
+            map.put( key, n);
+            if( map.size() > size){
+                DList temp = popFromTail();
+            }
         }
     }
 
