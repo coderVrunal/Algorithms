@@ -31,18 +31,18 @@ The number of recursion calls are not always linear. Hence refer to the executio
 Where total number of nodes in the tree corresponds to number of recursion calls during execution.
 
 
-#Space Complexity
+# Space Complexity
 Recursion related space and non-recursion related space
 
 
-##Recursion related space:
+## Recursion related space:
 In order to complete a function call, system allocates some space in stack to hold three important information.
 
 1. Returning address to function call. Once function is completed
 2. Parameters passed to function call
 3. Local variables of each function call
 
-#Tail Recursion
+# Tail Recursion
 
 The benefit of having tail recursion is that it could avoid the accumulation of stack overheads during the recursive calls, since the system could reuse a fixed amount space in the stack for each recursive call. 
 
