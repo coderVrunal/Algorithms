@@ -1,5 +1,8 @@
-package main.java.learn.leetcode;
-class FibonacciMemoization{
+package learn.leetcode;
+
+import java.util.HashMap;
+
+class FibonacciMemoization {
     static HashMap<Integer, Integer> cache = new HashMap<>();
 
     public static void main(String[] args) {

@@ -1,25 +1,48 @@
-package main.java.learn.leetcode;
+package learn.leetcode;
 
+import java.util.HashMap;
 
-class ClimbStairs{
+class ClimbStairs {
     public static void main(String [] args){
-
+        System.out.println(climbStairsRecursive(8));
+        System.out.println( climbStairsMemeoizationHelper(8, 0) ) ;
     }
 
-    static HashMap<Integer, Integer> cache = new HashMap<Integer, Integer>();
-    public static climb( int input){
-        if( cache.contains(input))
-        return cache.get( input );
-        int result ;
-        if( input == 1 )
-        result = input;
-        else if( input==2 )
-        result = input;
-        else 
-        result = climb(input);
+    public static int climbStairsRecursive( int n){
+        // This Recursive function will build from bottom up
+        
+        return climbStairsRecursiveHelper( n , 0);
+    }
 
-        cache.put( input ,result);
-        return result;
+    public static int climbStairsRecursiveHelper( int n, int index){
+        // Number of steps to reach 1 , 2 , 3 .....
+        // the base conditions to stop is if index is above n
+        // And if index == n
+
+        if( index > n )
+        return 0;
+        if( index == n )
+            return 1;
+        return climbStairsRecursiveHelper( n , index+1) + climbStairsRecursiveHelper(n,index+2);
+    }
+
+
+    static HashMap<Integer, Integer> cache = new HashMap<>();
+
+    public static int climbStairsMemoization( int n){
+       return climbStairsMemeoizationHelper(n, 0);
+    }
+
+    public static int climbStairsMemeoizationHelper( int n , int index){
+        if( index > n )
+            return 0;
+        if( index == n)
+            return 1;
+        if( cache.containsKey(index) ) 
+        return cache.get(index);
+
+        cache.put( index, climbStairsMemeoizationHelper(n, index+1) + climbStairsMemeoizationHelper(n, index+2));
+        return cache.get(index);
     }
 }
 

@@ -1,4 +1,4 @@
-package main.java.learn.leetcode;
+package learn.leetcode;
 
 class SwapListPairs{
     class ListNode{

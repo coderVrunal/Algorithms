@@ -27,9 +27,17 @@ it is the product of number of recursion invocations (R) and the complexity of e
 
 T : = R *O(s).
 
-The number of recursion calls are not always linear. Hence refer to the execution tree.
-Where total number of nodes in the tree corresponds to number of recursion calls during execution.
+The number of recursion calls are not always linear. Hence refer to the *execution tree.*
+Where total number of nodes in the tree corresponds to _number of recursion calls_ during execution.
 
+### Memoization - Top down
+> By caching and reusing intermediate results we can reduce the number of recursion calls.
+ie. Reducing number of branches in the execution tree.
+
+
+### Tabulation -Bottom Up
+
+https://media.geeksforgeeks.org/wp-content/cdn-uploads/Tabulation-vs-Memoization-1.png
 
 # Space Complexity
 Recursion related space and non-recursion related space
