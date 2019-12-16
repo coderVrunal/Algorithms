@@ -54,3 +54,11 @@ In order to complete a function call, system allocates some space in stack to ho
 
 The benefit of having tail recursion is that it could avoid the accumulation of stack overheads during the recursive calls, since the system could reuse a fixed amount space in the stack for each recursive call. 
 
+# Conclusion
+
+> When in doubt write the recurrence relationship
+
+> Whenever possible, apply memoization
+
+> When stack overflows, tail recursion might come to help
+

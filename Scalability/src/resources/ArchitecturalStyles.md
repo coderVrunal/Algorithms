@@ -7,7 +7,7 @@ Architecture styles is a family of architecture that share certain characteristi
 2. Recommendation for when to choose this style
 3. Benefit, challenges and best practice
     ### Benefit
-    ### Challenges 
+    ### Challenges - Complexity, Manageability, Inter-service communication, Messaging and consistency.
     ### best practice
     ### Constraints
     ### Examples

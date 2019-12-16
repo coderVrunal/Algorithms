@@ -6,6 +6,7 @@ class ClimbStairs {
     public static void main(String [] args){
         System.out.println(climbStairsRecursive(8));
         System.out.println( climbStairsMemeoizationHelper(8, 0) ) ;
+        System.out.println( climbStairsDP(8));
     }
 
     public static int climbStairsRecursive( int n){
@@ -43,6 +44,17 @@ class ClimbStairs {
 
         cache.put( index, climbStairsMemeoizationHelper(n, index+1) + climbStairsMemeoizationHelper(n, index+2));
         return cache.get(index);
+    }
+
+    public static int climbStairsDP(int n ){
+        int [] dp =new int [n+1];
+        dp[1] = 1;
+        dp[2] =2;
+
+        for( int i=3 ; i<= n; i++){
+            dp[i] = dp[i-1]+dp[i-2];
+        }
+        return dp[n];
     }
 }
 
