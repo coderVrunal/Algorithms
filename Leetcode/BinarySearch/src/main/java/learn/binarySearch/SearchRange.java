@@ -16,7 +16,8 @@ class SearchRange{
         int mid;
         while( left < right){
             mid = (left+right)/2;
-  
+            
         }
+        return nums;
     }
 }
