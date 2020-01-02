@@ -17,8 +17,9 @@ class ClosestValueInBST {
         }
     }
     public static int closestValueBinarySearch( TreeNode root, double target){
-        // Approach 2: Use binary serach across the tree
-        // keep running minDifference and traverse halve serach space by traversing the tree        
+        // Approach 2: Use binary serach across the BST
+        // keep running minDifference and traverse halve serach space by traversing the BST
+        // You can smartly split the search space by comparing left and right values
         int curr , closest = root.val;
         while( root != null ){
             curr = root.val;

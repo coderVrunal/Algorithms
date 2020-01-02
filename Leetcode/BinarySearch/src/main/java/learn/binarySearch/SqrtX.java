@@ -10,7 +10,7 @@ class SqrtX{
         if( x <2 )
             return x;
 
-        long left =1, right = x;
+        long left =2, right = x;
         long mid;
         while( left <= right ){
             mid = left+right/2;

@@ -4,6 +4,19 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - KSmallestBST",
+            "request": "launch",
+            "mainClass": "learn.leetcode.KSmallestBST",
+            "projectName": "BST"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Pow",
+            "request": "launch",
+            "mainClass": "learn.binarySearch.Pow",
+            "projectName": "BinarySearch"
+        }
     ]
 }
