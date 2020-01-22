@@ -6,6 +6,40 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MovingAverage",
+            "request": "launch",
+            "mainClass": "learn.leetcode.MovingAverage",
+            "projectName": "Design"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PivotIndex",
+            "request": "launch",
+            "mainClass": "learn.binarySearch.PivotIndex",
+            "projectName": "BinarySearch"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LongestIncreasingSubsequence",
+            "request": "launch",
+            "mainClass": "learn.leetcode.LongestIncreasingSubsequence",
+            "projectName": "DP"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - WildCardMatching",
+            "request": "launch",
+            "mainClass": "learn.leetcode.WildCardMatching",
+            "projectName": "DP"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LRU",
+            "request": "launch",
+            "mainClass": "main.java.learn.leetcode.LRU"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - KSmallestBST",
             "request": "launch",
             "mainClass": "learn.leetcode.KSmallestBST",

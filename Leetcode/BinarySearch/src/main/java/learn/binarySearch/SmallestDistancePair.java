@@ -5,5 +5,4 @@ class SmallestDistancePair{
 
     }
 
-    public static int 
 }
